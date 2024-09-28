@@ -1,8 +1,10 @@
 # ptv-myki-python
-Scrapes the ptv website to provide info about a myki,
+Scrapes the ptv website to provide info about an accounts mykis.
 
 # How to use:
-1. Make sure Google Chrome is installed.
-2. Fill in `rename.env` with your username and password.
-3. Install the required dependancies with `pip install -r requirements.txt`
-4. Run `main.py`
+1. Install Google Chrome
+2. Install the required dependancies with `pip install -r requirements.txt`
+3. Make a script and use the `getMykiInfo()` function with a username and password
+4. It will return a dictionary with info about all the mykis on that account.
+
+An example script is included
