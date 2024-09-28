@@ -88,9 +88,16 @@ def getMykiInfo(username:str, password:str):
             parts = balance_text.split(',')
             balance_text = parts[1].strip() if len(parts) > 1 else ''
             
+            # Use regex to get the card number ending
+            match = re.search(r'(•••• \d{4} \d)', cardNumber)
+
+            if match:
+                cardNumber = match.group(0)
+            else:
+                cardNumber =("Card number not found")
             
             # print(f"Myki {index + 1}: {format_myki_text(name_text)} - Balance: {balance_text}")
-            data[f'Myki {index + 1}'] = [format_myki_text(name_text),balance_text,]
+            data[f'Myki {index + 1}'] = [format_myki_text(name_text),balance_text, cardNumber]
 
 
 
